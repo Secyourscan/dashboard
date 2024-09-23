@@ -1,16 +1,50 @@
 ---
-
+import Main from "$lib/layouts/Main.astro"
+import hackerIcon from "$lib/lib/assets/hacker.svg"
+import emailScan from "$lib/lib/assets/email-scan.svg"
+import password from "$lib/lib/assets/password.svg"
+import InputPage from "$lib/components/InputPage.svelte"
+import ResultPage from "$lib/components/ResultPage.svelte"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<Main>
+	<div class="grid grid-cols-12 relative">
+		<div class="col-span-2  h-lvh bg-slate-900 flex flex-col justify-between py-8 px-8 sticky top-0">
+			<div>
+				<h1 class="text-2xl font-bold text-white">Secyourscan</h1>
+				<p class="text-slate-400">Admin Dashboard</p>
+			</div>
+			<div>
+				<div><ul class="flex flex-col gap-10">
+					<li class="flex flex-col gap-1 items-center">
+						<img src={hackerIcon.src} alt="icon" class="w-16 h-16">
+						<p class="text-red-400 font-bold">
+							Dark Web Report
+						</p>
+					</li>	
+					<li class="flex flex-col gap-1 items-center">
+						<img src={emailScan.src} alt="icon" class="w-16 h-16">
+						<p class="text-white">
+							Email Pawned Report
+						</p>
+					</li>	
+					<li class="flex flex-col gap-1 items-center">
+						<img src={password.src} alt="icon" class="w-16 h-16">
+						<p class="text-white text-center">
+							Password Compromised Report
+						</p>
+					</li>	
+					
+				</ul></div>
+			</div>
+			<div></div>
+		</div>
+		<div class="col-span-10 bg-gray-100 w-full">
+			<!-- <InputPage></InputPage> -->
+			 <ResultPage client:load></ResultPage>
+		</div>
+	</div>
+</Main>
+
+

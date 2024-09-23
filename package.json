@@ -10,8 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.8",
     "@astrojs/check": "^0.9.3",
+    "@astrojs/partytown": "^2.1.2",
+    "@astrojs/svelte": "^5.7.1",
+    "@astrojs/tailwind": "^5.1.1",
+    "astro": "^4.15.8",
+    "clsx": "^2.1.1",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "svelte": "^4.2.19",
+    "svelte-speedometer": "^3.0.1",
+    "tailwind-merge": "^2.5.2",
+    "tailwind-variants": "^0.2.1",
+    "tailwindcss": "^3.4.12",
     "typescript": "^5.6.2"
   }
 }
